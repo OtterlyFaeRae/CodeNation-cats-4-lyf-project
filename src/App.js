@@ -3,7 +3,7 @@ import './App.css';
 import Cat from './components/cat'
 
 function App() {
-  return
+  return <Cat/>
 }
 
 export default App;
