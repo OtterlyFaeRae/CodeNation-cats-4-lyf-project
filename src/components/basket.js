@@ -1,6 +1,7 @@
 import {useEffect} from "react";
 import "./styles/basket.style.js";
 
+
 const Basket = (props) => {
 
     const escapeKeyClose = (x) => {
@@ -16,13 +17,13 @@ const Basket = (props) => {
             }
         
     }, [])
-}
+
 
 return(
     <div>
         <div className="modal-content">
             <div className="modal-header">
-                <h3></h3>
+                <h3>{props.title}</h3>
             </div>
             <div className="modal-body"></div>
             <div className="modal-footer">
@@ -30,6 +31,8 @@ return(
             </div>
         </div>
     </div>
-)
+    )
+
+}
 
 export default Basket
