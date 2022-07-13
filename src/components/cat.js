@@ -17,6 +17,7 @@ const Cat = ({}) => {
         getCat();
     }, [])
 
+
     return (
         <div>
             <h4>{catName}</h4>
