@@ -1,24 +1,20 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import { } from "./styles/basket.style";
 import "../App.css"
 
 
 const Basket = (props) => {
-
     const escapeKeyClose = (x) => {
         if((x.charCode || x.keyCode) === 27) {
             props.onClose()
         }
     }
-
     useEffect(() => {
         document.body.addEventListener("keydown", escapeKeyClose) 
             return function cleanup() {
                 document.body.removeEventListener("keydown", escapeKeyClose)
             }
-        
     }, [])
-
 
 return(
     <div className={`basket ${props.show ? "show" : ""}`} onClick={props.onClose}>
@@ -26,7 +22,9 @@ return(
             <div className="basket-header">
                 <h3 className="basket-title">{props.title}</h3>
             </div>
-            <div className="basket-body">{props.children}</div>
+            <div className="basket-body">
+                {props.basket.map((cat, index)=> {return <p num={index}>{cat.name}</p>}
+            )}</div>
             <div className="basket-footer">
                 <button onClick={props.onClose}>Close</button>
             </div>
