@@ -5,7 +5,7 @@ import { faker } from "@faker-js/faker";
 import { Container } from './styles/main.style'
 
 const Main = () => {
-    const [boughtCats, setBoughtCats] = useState([])
+    const [basket, setBasket] = useState([])
     const [catList, setCatList] = useState([])
 
     useEffect(()=>{
@@ -16,7 +16,8 @@ const Main = () => {
                 return {pic: cat.url,
                 name: faker.name.firstName(),
                 breed: faker.animal.cat(),
-                price: faker.finance.amount()
+                price: faker.finance.amount(),
+                id: (new Date().getTime()*Math.random())
                 }
             })
             setCatList([...cats])
@@ -25,15 +26,17 @@ const Main = () => {
     },[])
     return (
         <Container>
-            <Basket boughtCats={boughtCats} setBoughtCats={setBoughtCats}/>
+            <Basket basket={basket} setBasket={setBasket}/>
             {catList.map((cat) => {
-                return <Cat boughtCats={boughtCats} 
-                setBoughtCats={setBoughtCats} 
+                return <Cat basket={basket} 
+                setBasket={setBasket}
                 pic={cat.pic} 
                 name={cat.name} 
                 breed={cat.breed} 
                 price={cat.price}
-                key={(new Date().getTime()*Math.random())}/>})}
+                key={cat.id}
+                id={cat.id}
+                />})}
         </Container>
         
     )
