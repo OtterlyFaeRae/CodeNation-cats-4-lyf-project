@@ -32,7 +32,7 @@ const Cat = ({boughtCats, setBoughtCats}) => {
                     <h4>{cat.breed}</h4>
                     <h4>{cat.price}</h4>
                 </InfoBox>
-                <BadButton onClick={()=>handleClick()}>Add to basket</BadButton>
+                <BadButton onClick={()=> handleClick()}>Add to basket</BadButton>
             </BotBox>
         </CatBox>
     )
