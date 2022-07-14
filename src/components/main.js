@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react'
-import Cat from './cat'
-import Basket from './basket'
+import Cat from './Cat'
 import { faker } from "@faker-js/faker";
 import { Container } from './styles/main.style'
 

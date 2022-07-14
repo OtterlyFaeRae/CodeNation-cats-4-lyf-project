@@ -1,8 +1,7 @@
 import './App.css';
-import Cat from './components/cat'
 import Basket from './components/basket.js';
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom"
-import Home from "./components/Main.js"
+import Main from "./components/Main.js"
 import About from "./components/about.js"
 import {useState, useEffect} from "react"
 
@@ -20,7 +19,7 @@ function App() {
                 <Basket title="Basket" onClose={() => setShow(false)} show={show} basket={basket} setBasket={setBasket}/>
             </nav>
             <Routes>
-                <Route path="/" element={<Home basket={basket} setBasket={setBasket}/>}></Route>
+                <Route path="/" element={<Main basket={basket} setBasket={setBasket}/>}></Route>
                 <Route path="/about" element={<About/>}></Route>
             </Routes>
             </BrowserRouter>
