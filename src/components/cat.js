@@ -1,29 +1,40 @@
 import {useState, useEffect} from 'react'
 import { faker } from "@faker-js/faker";
+import { CatBox, CatPic, BotBox, InfoBox, BadButton, Name } from './styles/cat.style'
 
 
-const Cat = ({}) => {
-    const [catPic, setCatPic] = useState([])
-    const [catName, setCatName] = useState("")
-    const [catPrice, setCatPrice] = useState("")
+const Cat = ({boughtCats, setBoughtCats}) => {
+    const [cat, setCat] = useState({})
     useEffect(()=>{
         const getCat = async () =>{
-        const response = await fetch('https://api.thecatapi.com/v1/images/search')
-        const data = await response.json();
-        setCatPic(data[0])
-        setCatName(faker.animal.cat());
-        setCatPrice(faker.commerce.price(10,100,2,'£'));
+            const response = await fetch('https://api.thecatapi.com/v1/images/search?limit1')
+            const data = await response.json();
+            setCat({
+                pic: data[0].url,
+                breed: faker.animal.cat(), 
+                name: faker.name.firstName(),
+                price: faker.commerce.price(10,100,2,'£')
+            });
         }
         getCat();
     }, [])
-
-
+    const handleClick = () =>{
+        let cart = [...boughtCats]
+        cart.push(cat)
+        setBoughtCats(cart)
+    }
     return (
-        <div>
-            <h4>{catName}</h4>
-            <img src={catPic.url}></img>
-            <h4>{catPrice}</h4>
-        </div>
+        <CatBox>
+            <Name>{cat.name}</Name>
+            <CatPic src={cat.pic} alt={`A ${cat.breed} named ${cat.name} available for adoption.`}></CatPic>
+            <BotBox>
+                <InfoBox>
+                    <h4>{cat.breed}</h4>
+                    <h4>{cat.price}</h4>
+                </InfoBox>
+                <BadButton onClick={()=>handleClick()}>Add to basket</BadButton>
+            </BotBox>
+        </CatBox>
     )
 }
 
