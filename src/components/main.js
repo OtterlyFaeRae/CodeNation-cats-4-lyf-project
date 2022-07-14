@@ -4,8 +4,7 @@ import Basket from './basket'
 import { faker } from "@faker-js/faker";
 import { Container } from './styles/main.style'
 
-const Main = () => {
-    const [basket, setBasket] = useState([])
+const Main = ({basket, setBasket}) => {
     const [catList, setCatList] = useState([])
 
     useEffect(()=>{
@@ -26,7 +25,7 @@ const Main = () => {
     },[])
     return (
         <Container>
-            <Basket basket={basket} setBasket={setBasket}/>
+            
             {catList.map((cat) => {
                 return <Cat basket={basket} 
                 setBasket={setBasket}
