@@ -1,5 +1,5 @@
 import './App.css';
-import Cat from './components/cat.js'
+import Cat from './components/cat'
 import Basket from './components/basket.js';
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom"
 import Home from "./components/main.js"
