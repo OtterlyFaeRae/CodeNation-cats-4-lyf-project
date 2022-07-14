@@ -26,7 +26,7 @@ return(
                 {props.basket.map((cat, index)=> {return <p num={index}>{cat.name}</p>}
             )}</div>
             <div className="basket-footer">
-                <button onClick={props.onClose}>Close</button>
+                <button className="close-button" onClick={props.onClose}>Close</button>
             </div>
         </div>
     </div>
