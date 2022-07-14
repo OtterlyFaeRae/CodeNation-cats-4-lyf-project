@@ -3,7 +3,7 @@ import { faker } from "@faker-js/faker";
 import { CatBox, CatPic, BotBox, InfoBox, Button, Name, BotText } from './styles/cat.style'
 
 
-const Cat = ({boughtCats, setBoughtCats, pic, name, breed, price}) => {
+const Cat = ({basket, setBasket, pic, name, breed, price}) => {
     const [cat, setCat] = useState({})
     useEffect(()=>{
         setCat({
@@ -15,9 +15,9 @@ const Cat = ({boughtCats, setBoughtCats, pic, name, breed, price}) => {
     }, [])
     
     const handleClick = () =>{
-        let cart = [...boughtCats]
+        let cart = [...basket]
         cart.push(cat)
-        setBoughtCats(cart)
+        setBasket(cart)
     }
     return (
         <CatBox>
