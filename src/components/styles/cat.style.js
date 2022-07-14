@@ -22,20 +22,24 @@ export const CatPic = styled.img`
     width: auto;
 `
 
-export const InfoBox = styled.div`
-    flex-direction: column; 
+export const InfoBox = styled.div` 
     margin: 5px;
 `
 
 export const BotBox = styled.div`
-    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+
 `
 
-export const BadButton = styled.button`
-    align-self: flex-end;
-    margin: 5px;
+export const Button = styled.button`
+
 `
 
 export const Name = styled.h4`
-    margin: 5px;
+    
+`
+
+export const BotText = styled.h4`
+    font-size: 10px;
 `
