@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+.basket {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+background-color: #DCDBE2;
+display: flex;
+align-items: center;
+justify-content: center;
+opacity: 0;
+transition: all 0.5s ease-in-out;
+pointer-events: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.basket.show{
+  opacity: 1;
+  pointer-events: visible;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.basket-content {
+  width: auto;
+  height: auto;
+  border-radius: 26px;
+  background: blue;
+  transform: translateY(-150px);
+  transition: all 0.5s ease-in-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.basket.show, .basket-content {
+  transform: translateY(5);
 }
 
-.App-link {
-  color: #61dafb;
+.basket-header, .basket-footer {
+  padding: auto;
+  font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.basket-title {
+  margin: auto;
+  color: red;
 }
+
+.basket-body {
+  padding: 10px;
+  border-top: 3px solid rgb(116, 199, 255);
+  border-bottom: 3px solid rgb(116, 199, 255);
+}
+
+/* #closeBasket {
+  padding: 6px;
+  width:auto;
+  height: auto;
+  background-color: rgb(20, 99, 255);
+} */
