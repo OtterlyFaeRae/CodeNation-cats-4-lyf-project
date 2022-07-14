@@ -1,5 +1,6 @@
 import {useEffect} from "react";
-import "./styles/basket.style.js";
+import { } from "./styles/basket.style";
+import "../App.css"
 
 
 const Basket = (props) => {
@@ -20,14 +21,14 @@ const Basket = (props) => {
 
 
 return(
-    <div>
-        <div className="modal-content">
-            <div className="modal-header">
-                <h3>{props.title}</h3>
+    <div className={`basket ${props.show ? "show" : ""}`} onClick={props.onClose}>
+        <div className="basket-content" onClick={x => x.stopPropagation()}>
+            <div className="basket-header">
+                <h3 className="basket-title">{props.title}</h3>
             </div>
-            <div className="modal-body"></div>
-            <div className="modal-footer">
-                <button onClick={props.onClick}>Close</button>
+            <div className="basket-body">{props.children}</div>
+            <div className="basket-footer">
+                <button onClick={props.onClose}>Close</button>
             </div>
         </div>
     </div>

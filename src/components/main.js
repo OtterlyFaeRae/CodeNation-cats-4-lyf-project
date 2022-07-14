@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import Cat from './Cat'
+import Cat from './cat'
 import { Container } from './styles/main.style'
 
 const Main = () => {
