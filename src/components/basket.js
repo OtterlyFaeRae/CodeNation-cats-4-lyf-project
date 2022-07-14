@@ -20,14 +20,14 @@ const Basket = (props) => {
 
 
 return(
-    <div>
-        <div className="modal-content">
+    <div className={`basket ${props.show ? props.show : ""}`} onClick={props.onClose}>
+        <div className="modal-content" onClick={x => x.stopPropagation()}>
             <div className="modal-header">
                 <h3>{props.title}</h3>
             </div>
-            <div className="modal-body"></div>
+            <div className="modal-body">{props.children}</div>
             <div className="modal-footer">
-                <button onClick={props.onClick}>Close</button>
+                <button onClick={props.onClose}>Close</button>
             </div>
         </div>
     </div>
