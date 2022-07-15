@@ -1,3 +1,8 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 .basket {
   position: fixed;
   left: 0;
@@ -67,7 +72,6 @@ button {
   margin-top: 10px;
   letter-spacing: 3px;
   cursor: pointer;
-  
 }
 
 button:hover {
@@ -76,9 +80,60 @@ button:hover {
   border: 3px solid #545454;
 }
 
-/* #closeBasket {
-  padding: 6px;
-  width:auto;
-  height: auto;
-  background-color: rgb(20, 99, 255);
-} */
+.navButton {
+padding: 0px;
+margin: 0px;
+margin-top: 30px;
+}
+
+/* Nav Bar Styling */
+nav {
+  height: 125px;
+  background-color: #f2e8cf;
+  font-size: 25px;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 5px solid #545454;
+  margin-bottom: 5px;
+}
+
+nav h1 {
+  font-size: 90px;
+  color: black;
+  letter-spacing: 9px;
+  font-style: italic;
+  padding: 0px;
+  margin: 15px;
+}
+
+.navLinks {
+  height: 30px;
+  color: #545454;
+  padding: 0px;
+  margin-top: 40px; 
+  display: flex;
+  justify-content: space-between;
+}
+
+.navLink1, .navLink2 {
+  text-decoration: none;
+  color: black;
+  transition: all 5.0s ease-out;
+}
+
+.navLinks:hover {
+  background-color: white;
+  border: 3px solid #545454;
+  border-style: ridge;
+  transform: scale(1.20);
+}
+
+.navLinks:active {
+  transform: scale(0.96)
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+}
