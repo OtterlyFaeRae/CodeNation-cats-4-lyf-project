@@ -4,16 +4,16 @@
   top: 0;
   right: 0;
   bottom: 0;
-background-color: rgb(220, 219, 226, 0.8);
-display: flex;
-align-items: center;
-justify-content: center;
-opacity: 0;
-transition: all 0.5s ease-in-out;
-pointer-events: none;
+  background-color: rgb(220, 219, 226, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
 }
 
-.basket.show{
+.basket.show {
   opacity: 1;
   pointer-events: visible;
 }
@@ -23,16 +23,18 @@ pointer-events: none;
   height: fit-content;
   border-radius: 26px;
   background: #f2e8cf;
-  border: 3px solid  #545454;
+  border: 3px solid #545454;
   transform: translateY(-150px);
   transition: all 0.5s ease-in-out;
 }
 
-.basket.show, .basket-content {
+.basket.show,
+.basket-content {
   transform: translateY(5);
 }
 
-.basket-header, .basket-footer {
+.basket-header,
+.basket-footer {
   height: 50px;
   font-size: large;
   padding-bottom: 20px;
@@ -45,16 +47,16 @@ pointer-events: none;
 
 .basket-title {
   color: #545454;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 40px; 
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
   letter-spacing: 4px;
   text-align: center;
 }
 
 .basket-body {
   padding: 10px;
-  border-top: 3px solid  #545454;
-  border-bottom: 3px solid  #545454;
+  border-top: 3px solid #545454;
+  border-bottom: 3px solid #545454;
   height: 340px;
 }
 
@@ -67,7 +69,6 @@ button {
   margin-top: 10px;
   letter-spacing: 3px;
   cursor: pointer;
-  
 }
 
 button:hover {
@@ -82,3 +83,54 @@ button:hover {
   height: auto;
   background-color: rgb(20, 99, 255);
 } */
+
+.about-section {
+  background: url(https://image.petmd.com/files/2022-01/happy-cat.jpg) no-repeat
+    left;
+  background-size: 55%;
+  background-color: #fffdd0;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.inner-container {
+  width: 55%;
+  float: right;
+  background-color: #fdfdfd;
+  padding: 150px 100px;
+  margin-left: 600px;
+}
+
+.inner-container h1 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900px;
+}
+
+.about-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+
+.text {
+  font-size: 13px;
+  color: #545454;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
