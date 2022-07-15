@@ -1,26 +1,43 @@
 import './App.css';
-import Cat from './components/Cat'
 import Basket from './components/basket.js';
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom"
-import Home from "./components/Main.js"
+import Main from "./components/Main.js"
 import About from "./components/about.js"
 import {useState, useEffect} from "react"
+import CatLogo from './cat_logo_one.png'
+
+let Image = (props) => {
+    return <img src = {props.src} alt = "CatLogo"></img>
+}
 
 function App() {
     const [show, setShow] = useState(false)
     const [basket, setBasket] = useState([])
+    const [prices, setPrices] = useState([])
     
     return (
         <div>
             <BrowserRouter>
             <nav>
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-                <button id="open-button" onClick={() => setShow(true)}>Basket</button>
+                <div className='header'>
+                    <Image src = {CatLogo}/>
+                    <h1>Cats4Lyf</h1>
+                </div>
+                
+                <div className='navLinks'>
+                    <Link className='navLink1' to="/" >Home</Link>
+                </div>
+                <div className='navLinks'>
+                    <Link className='navLink2' to="/about" >About</Link>
+                </div>
+                <div className='navButton'>
+                    <button  id="open-button" onClick={() => setShow(true)}>Basket</button>
+                </div>
+                
                 <Basket title="Basket" onClose={() => setShow(false)} show={show} basket={basket} setBasket={setBasket}/>
             </nav>
             <Routes>
-                <Route path="/" element={<Home basket={basket} setBasket={setBasket}/>}></Route>
+                <Route path="/" element={<Main basket={basket} setBasket={setBasket}/>}></Route>
                 <Route path="/about" element={<About/>}></Route>
             </Routes>
             </BrowserRouter>
