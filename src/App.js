@@ -1,7 +1,7 @@
 import './App.css';
 import Basket from './components/basket.js';
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom"
-import Main from "./components/Main.js"
+import main from "./components/Main.js"
 import About from "./components/about.js"
 import {useState, useEffect} from "react"
 import CatLogo from './images/cat_logo_one.png'
