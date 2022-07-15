@@ -1,6 +1,7 @@
-*{
-  padding: 0;
-  margin: 0;
+
+* {
+  padding: 0px;
+  margin: 0px;
 }
 
 .basket {
@@ -9,16 +10,16 @@
   top: 0;
   right: 0;
   bottom: 0;
-background-color: rgb(220, 219, 226, 0.8);
-display: flex;
-align-items: center;
-justify-content: center;
-opacity: 0;
-transition: all 0.5s ease-in-out;
-pointer-events: none;
+  background-color: rgb(220, 219, 226, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
 }
 
-.basket.show{
+.basket.show {
   opacity: 1;
   pointer-events: visible;
 }
@@ -28,16 +29,18 @@ pointer-events: none;
   height: fit-content;
   border-radius: 26px;
   background: #f2e8cf;
-  border: 3px solid  #545454;
+  border: 3px solid #545454;
   transform: translateY(-150px);
   transition: all 0.5s ease-in-out;
 }
 
-.basket.show, .basket-content {
+.basket.show,
+.basket-content {
   transform: translateY(5);
 }
 
-.basket-header, .basket-footer {
+.basket-header,
+.basket-footer {
   height: 50px;
   font-size: large;
   padding-bottom: 20px;
@@ -50,8 +53,8 @@ pointer-events: none;
 
 .basket-title {
   color: #545454;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 40px; 
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
   letter-spacing: 4px;
   text-align: center;
 }
@@ -72,7 +75,6 @@ button {
   margin-top: 10px;
   letter-spacing: 3px;
   cursor: pointer;
-  
 }
 
 button:hover {
@@ -81,16 +83,60 @@ button:hover {
   border: 3px solid #545454;
 }
 
-nav{
-  padding: auto;
-  margin: auto;
-  height: 100px;
-  background-color: #545454;
+.navButton {
+padding: 0px;
+margin: 0px;
+margin-top: 30px;
 }
 
-/* #closeBasket {
-  padding: 6px;
-  width:auto;
-  height: auto;
-  background-color: rgb(20, 99, 255);
-} */
+/* Nav Bar Styling */
+nav {
+  height: 125px;
+  background-color: #f2e8cf;
+  font-size: 25px;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 5px solid #545454;
+  margin-bottom: 5px;
+}
+
+nav h1 {
+  font-size: 90px;
+  color: black;
+  letter-spacing: 9px;
+  font-style: italic;
+  padding: 0px;
+  margin: 15px;
+}
+
+.navLinks {
+  height: 30px;
+  color: #545454;
+  padding: 0px;
+  margin-top: 40px; 
+  display: flex;
+  justify-content: space-between;
+}
+
+.navLink1, .navLink2 {
+  text-decoration: none;
+  color: black;
+  transition: all 5.0s ease-out;
+}
+
+.navLinks:hover {
+  background-color: white;
+  border: 3px solid #545454;
+  border-style: ridge;
+  transform: scale(1.20);
+}
+
+.navLinks:active {
+  transform: scale(0.96)
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+}

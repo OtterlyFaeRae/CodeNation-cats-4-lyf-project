@@ -1,7 +1,6 @@
-import {useEffect, useState} from "react";
-import { } from "./styles/basket.style";
-import "../App.css"
-
+import { useEffect, useState } from "react";
+import {} from "./styles/basket.style";
+import "../App.css";
 
 const Basket = (props) => {
     const [prices, setPrices] = useState([])
@@ -58,11 +57,21 @@ return(
                 {/* <p>Total: £{priceTotal}</p> */}
                 <button className="close-button" onClick={props.onClose}>Close</button>
             </div>
-        </div>
-    </div>
-    )
 
-}
+        </div>
+        <div className='basket-footer'>
+          <button className='close-button' onClick={props.onClose}>
+            Close
+          </button>
+        </div>
+        <div>
+          <button className='remove-button'>Remove</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 
 const BasketItem = ({basket, setBasket, name, breed, price, index}) => {
     const handleClick = (index) => {
@@ -84,4 +93,4 @@ const BasketItem = ({basket, setBasket, name, breed, price, index}) => {
     )
 }
 
-export default Basket
+export default Basket;
