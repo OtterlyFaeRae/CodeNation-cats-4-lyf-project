@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react'
-import { faker } from "@faker-js/faker";
 import { CatBox, CatPic, BotBox, InfoBox, Button, Name, BotText } from './styles/cat.style'
 
 

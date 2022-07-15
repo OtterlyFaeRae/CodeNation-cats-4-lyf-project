@@ -1,8 +1,7 @@
 import './App.css';
-import Cat from './components/Cat'
 import Basket from './components/basket.js';
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom"
-import Home from "./components/Main.js"
+import Main from "./components/Main.js"
 import About from "./components/about.js"
 import {useState, useEffect} from "react"
 import CatLogo from './cat_logo_one.png'
@@ -14,6 +13,7 @@ let Image = (props) => {
 function App() {
     const [show, setShow] = useState(false)
     const [basket, setBasket] = useState([])
+    const [prices, setPrices] = useState([])
     
     return (
         <div>
@@ -37,7 +37,7 @@ function App() {
                 <Basket title="Basket" onClose={() => setShow(false)} show={show} basket={basket} setBasket={setBasket}/>
             </nav>
             <Routes>
-                <Route path="/" element={<Home basket={basket} setBasket={setBasket}/>}></Route>
+                <Route path="/" element={<Main basket={basket} setBasket={setBasket}/>}></Route>
                 <Route path="/about" element={<About/>}></Route>
             </Routes>
             </BrowserRouter>

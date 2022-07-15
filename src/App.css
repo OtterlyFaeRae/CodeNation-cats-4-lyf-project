@@ -1,3 +1,4 @@
+
 * {
   padding: 0px;
   margin: 0px;
@@ -60,9 +61,9 @@
 
 .basket-body {
   padding: 10px;
-  border-top: 3px solid #545454;
-  border-bottom: 3px solid #545454;
-  height: 340px;
+  border-top: 3px solid  #545454;
+  border-bottom: 3px solid  #545454;
+  height: fit-content;
 }
 
 button {
