@@ -1,5 +1,5 @@
-import { Component } from "react";
-import styled from "styled-components"; 
+// import { Component } from "react";
+// import styled from "styled-components"; 
 
 
 // export const basket = styled.div`

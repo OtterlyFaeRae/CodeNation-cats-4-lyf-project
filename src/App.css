@@ -4,7 +4,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-background-color: #DCDBE2;
+background-color: rgb(220, 219, 226, 0.8);
 display: flex;
 align-items: center;
 justify-content: center;
@@ -19,10 +19,11 @@ pointer-events: none;
 }
 
 .basket-content {
-  width: auto;
-  height: auto;
+  width: 500px;
+  height: fit-content;
   border-radius: 26px;
-  background: blue;
+  background: #f2e8cf;
+  border: 3px solid  #545454;
   transform: translateY(-150px);
   transition: all 0.5s ease-in-out;
 }
@@ -32,18 +33,45 @@ pointer-events: none;
 }
 
 .basket-header, .basket-footer {
-  padding: auto;
+  height: 50px;
   font-size: large;
+  padding-bottom: 20px;
+}
+
+.basket-footer {
+  display: flex;
+  justify-content: end;
 }
 
 .basket-title {
-  margin: auto;
-  color: red;
-text-align: center;
+  color: #545454;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px; 
+  letter-spacing: 4px;
+  text-align: center;
 }
 
 .basket-body {
   padding: 10px;
-  border-top: 3px solid rgb(116, 199, 255);
-  border-bottom: 3px solid rgb(116, 199, 255);
+  border-top: 3px solid  #545454;
+  border-bottom: 3px solid  #545454;
+  height: 340px;
+}
+
+button {
+  font-size: 20px;
+  border: 3px solid white;
+  background-color: #545454;
+  color: white;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  
+}
+
+button:hover {
+  background-color: white;
+  color: #545454;
+  border: 3px solid #545454;
 }

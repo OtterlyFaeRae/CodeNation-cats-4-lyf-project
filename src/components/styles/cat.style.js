@@ -12,6 +12,9 @@ export const CatBox = styled.div`
     margin: auto;
     padding: auto;
     border: 1px solid;
+    background: #f2e8cf;
+    border: 3px solid #545454;
+
     `
 
 export const CatPic = styled.img`
@@ -20,22 +23,30 @@ export const CatPic = styled.img`
     max-width: 250px;
     height: auto;
     width: auto;
+    border-top: 3px solid #545454;
+    border-bottom: 3px solid #545454;
 `
 
-export const InfoBox = styled.div`
-    flex-direction: column; 
+export const InfoBox = styled.div` 
     margin: 5px;
 `
 
 export const BotBox = styled.div`
-    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+
 `
 
-export const BadButton = styled.button`
-    align-self: flex-end;
-    margin: 5px;
+export const Button = styled.button`
+    
 `
 
 export const Name = styled.h4`
-    margin: 5px;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 18px;  
+`
+
+export const BotText = styled.h4`
+    font-size: 14px;
 `
