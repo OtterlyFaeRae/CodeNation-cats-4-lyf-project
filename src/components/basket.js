@@ -74,7 +74,7 @@ const BasketItem = ({basket, setBasket, name, breed, price, index}) => {
                 <p>{breed}</p>
                 <p>{price}</p>
             </div>
-            <button onClick={()=>handleClick(index)}>Button</button>
+            <button onClick={()=>handleClick(index)}>Remove</button>
         </div>
         
         
