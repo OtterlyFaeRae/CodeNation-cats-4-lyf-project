@@ -57,22 +57,10 @@ return(
                 {/* <p>Total: £{priceTotal}</p> */}
                 <button className="close-button" onClick={props.onClose}>Close</button>
             </div>
-
         </div>
-        <div className='basket-footer'>
-          <button className='close-button' onClick={props.onClose}>
-            Close
-          </button>
-        </div>
-        <div>
-          <button className='remove-button'>Remove</button>
-        </div>
-      </div>
     </div>
-  );
+    );
 };
-
-
 const BasketItem = ({basket, setBasket, name, breed, price, index}) => {
     const handleClick = (index) => {
         let newBasket = [...basket]
