@@ -27,7 +27,7 @@ const Cat = ({basket, setBasket, pic, name, breed, price}) => {
                     <BotText>{breed}</BotText>
                     <BotText>{price}</BotText>
                 </InfoBox>
-                <Button onClick={()=>handleClick()}>Add to basket</Button>
+                <Button onClick={()=> handleClick()}>Add to basket</Button>
             </BotBox>
         </CatBox>
     )
