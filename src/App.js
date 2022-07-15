@@ -8,6 +8,7 @@ import {useState, useEffect} from "react"
 function App() {
     const [show, setShow] = useState(false)
     const [basket, setBasket] = useState([])
+    const [prices, setPrices] = useState([])
     
     return (
         <div>
@@ -16,7 +17,15 @@ function App() {
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
                 <button id="open-button" onClick={() => setShow(true)}>Basket</button>
-                <Basket title="Basket" onClose={() => setShow(false)} show={show} basket={basket} setBasket={setBasket}/>
+                <Basket 
+                title="Basket" 
+                onClose={() => setShow(false)} 
+                show={show} 
+                basket={basket} 
+                setBasket={setBasket}
+                prices={prices}
+                setPrices={setPrices}
+                />
             </nav>
             <Routes>
                 <Route path="/" element={<Main basket={basket} setBasket={setBasket}/>}></Route>
