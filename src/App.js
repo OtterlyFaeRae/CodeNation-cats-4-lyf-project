@@ -25,7 +25,7 @@ function App() {
                 </div>
                 
                 <div className='navLinks'>
-                    <Link className='navLink1' to="/" >Home</Link>
+                    <Link className='navLink1' to="/cats-4-lyf-project/" >Home</Link>
                 </div>
                 <div className='navLinks'>
                     <Link className='navLink2' to="/about" >About</Link>
@@ -37,7 +37,7 @@ function App() {
                 <Basket title="Basket" onClose={() => setShow(false)} show={show} basket={basket} setBasket={setBasket}/>
             </nav>
             <Routes>
-                <Route path="/" element={<Main basket={basket} setBasket={setBasket}/>}></Route>
+                <Route path="/cats-4-lyf-project/" element={<Main basket={basket} setBasket={setBasket}/>}></Route>
                 <Route path="/about" element={<About/>}></Route>
             </Routes>
             </BrowserRouter>
