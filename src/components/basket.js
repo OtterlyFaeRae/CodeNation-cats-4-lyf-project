@@ -3,8 +3,6 @@ import {} from "./styles/basket.style";
 import "../App.css";
 
 const Basket = (props) => {
-    const [prices, setPrices] = useState([])
-    const [priceTotal, setPriceTotal] = useState([])
     const escapeKeyClose = (x) => {
         if((x.charCode || x.keyCode) === 27) {
             props.onClose()
