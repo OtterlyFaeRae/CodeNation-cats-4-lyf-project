@@ -9,16 +9,16 @@
   top: 0;
   right: 0;
   bottom: 0;
-background-color: rgb(220, 219, 226, 0.8);
-display: flex;
-align-items: center;
-justify-content: center;
-opacity: 0;
-transition: all 0.5s ease-in-out;
-pointer-events: none;
+  background-color: rgb(220, 219, 226, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
 }
 
-.basket.show{
+.basket.show {
   opacity: 1;
   pointer-events: visible;
 }
@@ -28,16 +28,18 @@ pointer-events: none;
   height: fit-content;
   border-radius: 26px;
   background: #f2e8cf;
-  border: 3px solid  #545454;
+  border: 3px solid #545454;
   transform: translateY(-150px);
   transition: all 0.5s ease-in-out;
 }
 
-.basket.show, .basket-content {
+.basket.show,
+.basket-content {
   transform: translateY(5);
 }
 
-.basket-header, .basket-footer {
+.basket-header,
+.basket-footer {
   height: 50px;
   font-size: large;
   padding-bottom: 20px;
@@ -50,16 +52,16 @@ pointer-events: none;
 
 .basket-title {
   color: #545454;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 40px; 
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
   letter-spacing: 4px;
   text-align: center;
 }
 
 .basket-body {
   padding: 10px;
-  border-top: 3px solid  #545454;
-  border-bottom: 3px solid  #545454;
+  border-top: 3px solid #545454;
+  border-bottom: 3px solid #545454;
   height: 340px;
 }
 
