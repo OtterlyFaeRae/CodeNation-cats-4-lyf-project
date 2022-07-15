@@ -24,7 +24,6 @@ const Main = ({basket, setBasket}) => {
     },[])
     return (
         <Container>
-            
             {catList.map((cat) => {
                 return <Cat basket={basket} 
                 setBasket={setBasket}
